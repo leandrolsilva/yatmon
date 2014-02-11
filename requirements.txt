@@ -1,0 +1,8 @@
+pip install flask
+pip install flask-script
+pip install WTForms
+pip install mongoengine
+pip install flask_mongoengine
+
+#proxy example:
+#pip --proxy="user:passwd@server:port" install package

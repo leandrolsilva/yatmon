@@ -7,5 +7,7 @@ app.config["SECRET_KEY"] = "KeepThisS3cr3t"
 
 db = MongoEngine(app)
 
+from core import views
+
 if __name__ == '__main__':
     app.run()
