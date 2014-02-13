@@ -14,7 +14,7 @@ class User(db.Document):
     #email used in notification tool
     email = db.StringField(max_length=50, required=True)
 
-    #the password... I'll use sha256 for hash authentication... ;]
+    #the password... I'll use sha256, sha512 for hash authentication... ;]
     password = db.StringField(max_length=128, required=True)
 
 
@@ -40,7 +40,7 @@ class Task(db.Document):
     #the priority of task['urgent', 'medium', 'just_a_alert']
     priority = db.StringField(max_length=10, required=True)
 
-    #some description about the task... 
+    #some description about the task...
     desc = db.StringField(max_length=255, required=True)
 
     def get_absolute_url(self):
