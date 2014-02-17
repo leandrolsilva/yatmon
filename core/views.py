@@ -2,8 +2,7 @@ from flask import render_template
 from flask.ext.security import login_required, \
                                Security, MongoEngineUserDatastore
 from core import app, db
-from core.models import Role
-from users.models import User
+from core.models import Role, User
 
 
 # Setup Flask-Security
@@ -23,14 +22,6 @@ def signup():
     '''this function just call a simple form'''
     return render_template("security/register_user.html")
 
-
-# Create a user to test with
-@app.before_first_request
-def create_user():
-    ''' this function inser a user in the database'''
-    user_datastore.create_user(email='matt@nobien.net', password='password')
-
-
 @app.route('/sigin/')
 def signin():
     '''this function call the login form'''
@@ -48,5 +39,4 @@ def logout():
 @login_required
 def user_auth(nickname, password):
     '''This class make the user validation and create a session'''
-    if nickname == "oi" and password == "oi":
-        return render_template("index.html")
+    pass
