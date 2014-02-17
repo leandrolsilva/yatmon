@@ -1,22 +1,6 @@
 import datetime
 from flask import url_for
-from app import db
-
-class User(db.Document):
-    '''
-    docstring
-    '''
-    created_at = db.DateTimeField(default=datetime.datetime.now, required=True)
-
-    #nickname used in login and other things...
-    nickname = db.StringField(max_length=30, required=True)
-
-    #email used in notification tool
-    email = db.StringField(max_length=50, required=True)
-
-    #the password... I'll use sha256, sha512 for hash authentication... ;]
-    password = db.StringField(max_length=128, required=True)
-
+from core import db
 
 class Task(db.Document):
     '''
