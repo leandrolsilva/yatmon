@@ -13,6 +13,7 @@ class User(db.Document):
     '''model for users...'''
     #editable fields
     nickname = db.StringField(max_length=30, required=True)
+    id = db.StringField(required=True)
     email = db.StringField(max_length=50, required=True)
     password = db.StringField(max_length=128, required=True)
     #status = [True, False]
