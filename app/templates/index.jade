@@ -1,0 +1,26 @@
+extends layout
+block title
+    |YATMON
+block menu_item_1
+    a(href=url_for('index'))
+        |Home
+block menu_item_2
+    a(href=url_for('project'))
+        |Source Code
+block text_muted
+    p
+        |Yet Another Task list with MongoDB
+
+block content
+  .jumbotron
+     h1
+        small
+            del
+                |"Forgot My Commitments"
+        |Use YATMON!
+     p.lead
+        |This is just a proof of concepts, but totally useful. With YATMON you won't forget your commitments or special dates...
+        |In the next time, we'll improve it with a login/auth system. :]
+     p
+        a.btn.btn-lg.btn-success(href="#", role="button")
+            |I wanna try it!

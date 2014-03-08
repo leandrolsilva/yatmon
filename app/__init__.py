@@ -4,9 +4,6 @@ from flask.ext.mongoengine import MongoEngine
 
 app = Flask(__name__)
 
-# PyJade
-app.jinja_env.add_extension('pyjade.ext.jinja.PyJadeExtension')
-
 app.config["MONGODB_SETTINGS"] = {'DB': "yatmon"}
 app.config["SECRET_KEY"] = "175V3rY53cR37B0Y"
 
