@@ -3,21 +3,26 @@ from flask.ext.mongoengine import MongoEngine
 
 
 app = Flask(__name__)
+
+# PyJade
+app.jinja_env.add_extension('pyjade.ext.jinja.PyJadeExtension')
+
 app.config["MONGODB_SETTINGS"] = {'DB': "yatmon"}
 app.config["SECRET_KEY"] = "175V3rY53cR37B0Y"
 
-#Settings to flask-security
+# Settings to flask-security
 app.config["SECURITY_PASSWORD_HASH"] = "sha512_crypt"
 app.config["SECURITY_EMAIL_SENDER"] = "no-replay@yatmon.net"
 
 app.config["SECURITY_POST_REGISTER_VIEW"] = "/index"
 
-#unauthorized acess https://imgflip.com/i/6v64e
+# unauthorized acess https://imgflip.com/i/6v64e
 app.config["SECURITY_UNAUTHORIZED_VIEW"] = "error_403"
 
-#mongodb connect... I'm not confident with this yet...
+# mongodb connect... I'm not confident with this yet...
 db = MongoEngine(app)
 
-from core import views
+from app import views
+
 if __name__ == '__main__':
     app.run()

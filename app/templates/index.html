@@ -3,7 +3,7 @@
 {% block title %}YATMON - Home{% endblock %}
 
 {% block menu_item_1%}<a href="{{ url_for('index') }}" >Home</a>{%endblock%}
-{% block menu_item_2%}<a href="{{ url_for('signin') }}">Sign In</a>{%endblock%}
+{% block menu_item_2%}<a href="{{ url_for('project') }}">Source Code</a>{%endblock%}
 
 {%block text_muted %}Yet Another Task list with MongoDB{%endblock%}
 
@@ -11,10 +11,11 @@
     <div class="jumbotron">
     <h1><del>Forget My Commitments</del> Use YATMON!</h1>
     <p class="lead">
-        This is just a proof of concepts, but totally useful. With YATMON you won't forget your commitments or special dates...Create your user right now and enjoy it!
+        This is just a proof of concepts, but totally useful. With YATMON you won't forget your commitments or special dates...
+        In the next time, we'll improve it with a login/auth system. :]
     </p>
     <p>
-        <a class="btn btn-lg btn-success" href="{{ url_for('signup')}}" role="button">Sign up today!
+        <a class="btn btn-lg btn-success" href="#" role="button">I wanna try it!
         </a>
     </p>
     </div>
