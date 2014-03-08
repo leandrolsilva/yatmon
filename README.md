@@ -16,6 +16,6 @@ My backend is:
 * MongoDB -> NOSQL
 
 Frontend:
-* <del> AngularJS</del> Bootstrap -> I need more tests with flask + AngularJS.
+I'm using PyJade to make the pages and AngularJS for sometricks...
 
 Let's to code!
