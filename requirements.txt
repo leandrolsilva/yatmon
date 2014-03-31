@@ -4,3 +4,4 @@ pip install WTForms
 pip install mongoengine
 pip install flask_mongoengine
 pip install pytest
+pip install pyjade
