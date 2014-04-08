@@ -1,0 +1,11 @@
+extends layout
+block title
+	|New Task
+block content
+	for form_field in taskform
+		div.row
+			div.col-md-6
+				= form_field.label 
+				|: 
+			div.col-md-6
+				= form_field

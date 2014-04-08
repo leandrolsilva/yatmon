@@ -6,7 +6,7 @@ import sys
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
 from flask.ext.script import Manager, Server
-from app import app
+from core import app
 # PyJade
 app.jinja_env.add_extension('pyjade.ext.jinja.PyJadeExtension')
 

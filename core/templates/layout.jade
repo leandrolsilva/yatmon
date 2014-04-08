@@ -8,6 +8,7 @@ html(lang="en")
     meta(name='author', content='alexandre souza')
     title
       block title
+      |  -- YATMON
 
     //Bootstrap core CSS
     link(href=url_for('static', filename='css/bootstrap/bootstrap.css'), rel='stylesheet')
@@ -24,13 +25,14 @@ html(lang="en")
       .header
         ul.nav.nav-pills.pull-right
           li.active
-            block menu_item_1
+            a(href=url_for('index'))|HOME
           li
-            block menu_item_2
+            a(href=url_for('project'))|Source Code
           li
             block menu_item_3
         h3.text-muted
-          block text_muted
+          p
+            |Yet Another Task list with MongoDB
         block content
 
       .footer(style='text-align: center;')
